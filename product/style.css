@@ -1,0 +1,20 @@
+table img{
+    height: 50px;
+    width: 50px;
+}
+.container{
+    width: 100%;
+}
+.maininfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2rem;
+}
+h1{
+    text-align: center;
+}
+.Foodsinfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2rem;   
+}
