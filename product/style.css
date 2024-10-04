@@ -1,20 +1,28 @@
+
+body{
+background-image: url(../3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg);
+/* background-repeat: no-repeat; */
+}
 table img{
     height: 50px;
-    width: 50px;
+    width: 50px; 
 }
 .container{
     width: 100%;
+
 }
 .maininfo{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     row-gap: 2rem;
+
 }
 h1{
     text-align: center;
+    color: #e61b1b;
 }
 .Foodsinfo{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     row-gap: 2rem;   
 }

@@ -27,7 +27,7 @@ form{
 input{
     text-align: center;
     border: 2px solid black;
-    margin: 6px;
+    margin: 4px;
     width: 14em;
     height: 2em;
     border-radius: 20px;
@@ -41,5 +41,5 @@ button{
     height: 2em;
     border-radius: 10px;
     width: 6em;
-    margin-left: 4em;
+    margin-left: 8.5em;
 }
