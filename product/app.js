@@ -13,11 +13,15 @@ createProduct.then((productsInfo)=>{
     let mainInfo=document.querySelector(".maininfo")
    productsInfo.products.forEach(mainProduct => {
     let mainCard =`<div class="card" style="width: 18rem;">
-  <img src="${mainProduct.images[0]}" class="card-img-top" alt="...">
+  <img src="${mainProduct.images[0]} " class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${mainProduct.brand}</h5>
+    <h4 class="card-title">${mainProduct.brand}</h4>
     <p class="card-text">${mainProduct.description}</p>
-    <a href="#" class="btn btn-primary">${mainProduct.price} <i class="bi bi-bag"></i></a>
+    <h4 class="card-title"> ${"Rating"} ${mainProduct.rating}</h4>
+    
+    <h5 class="card-text">${mainProduct.returnPolicy}</h5>
+
+    <a href="#" class="btn btn-primary">${"Price "}  ${mainProduct.price} <i class="bi bi-bag"></i></a>
   </div>
 </div>`
 mainInfo.innerHTML+=mainCard
@@ -32,7 +36,7 @@ async function fetchfoods() {
     let foodsUrl =await fetch('https://dummyjson.com/recipes');
     // console.log(products);
     let foodInfo = await foodsUrl.json();  
-    console.log(foodInfo);
+    console.log(foodInfo); 
     return foodInfo
 }
 fetchfoods();
@@ -44,8 +48,10 @@ createfoods.then((foodInfo)=>{
   <img src="${mainFoods.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${mainFoods.name}</h5>
+    <h5 class="card-title">${"Rating"} ${mainFoods.rating}</h5>
+
     <p class="card-text">${mainFoods.instructions[2]}</p>
-    <a href="#" class="btn btn-primary">${mainFoods.prepTimeMinutes} </a>
+    <a href="#" class="btn btn-primary">${"prepTimeMinutes"}  ${mainFoods.prepTimeMinutes} </a>
   </div>
 </div>`
 mainFood.innerHTML+=foodCard
@@ -58,7 +64,7 @@ mainFood.innerHTML+=foodCard
 });
 
 let mainDiv =document.getElementById("user");
-console.log(mainDiv);
+// console.log(mainDiv);
 
 async function dataFech() {
 let user = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -86,8 +92,15 @@ userData.then(({userInfo,postInfo})=>{
 
     let createH2=document.createElement("h2");
     createH2.innerHTML=`userName : ${mainUser.name}`;
+
     // console.log(createH2);
     mainDiv.appendChild(createH2);
+    let createh3=document.createElement("h3");
+    createh3.innerHTML=`Email : ${mainUser.email}`;
+    
+    // console.log(createH2);
+    mainDiv.appendChild(createh3);
+
 for (let j=0;j<postInfo.length;j++){
     let mainPost =postInfo[j];
     if(mainPost.userId===mainUser.id ){

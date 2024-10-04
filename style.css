@@ -1,0 +1,45 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.container{
+    /* border: 2px solid black; */
+    height: 200px;
+    width: 330px;
+    margin-top: 10em;
+    border-radius: 10px;
+    box-shadow: 2px 8px 5px 10px;
+}
+form{
+    margin-top: 2em;
+    margin-left: 4em;
+}
+input{
+    text-align: center;
+    border: 2px solid black;
+    margin: 6px;
+    width: 14em;
+    height: 2em;
+    border-radius: 20px;
+}
+label{
+    text-align: center;
+    margin-left: 2em;
+    color: #fff;
+}
+button{
+    height: 2em;
+    border-radius: 10px;
+    width: 6em;
+    margin-left: 4em;
+}
