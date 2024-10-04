@@ -13,7 +13,7 @@ createProduct.then((productsInfo)=>{
     let mainInfo=document.querySelector(".maininfo")
    productsInfo.products.forEach(mainProduct => {
     let mainCard =`<div class="card" style="width: 18rem;">
-  <img src="${mainProduct.images[0]} " class="card-img-top" alt="...">
+  <img src="${mainProduct.images[0]} " class="card-img-top " alt="...">
   <div class="card-body">
     <h4 class="card-title">${mainProduct.brand}</h4>
     <p class="card-text">${mainProduct.description}</p>
